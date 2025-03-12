@@ -10,6 +10,7 @@
 body {
     background-color: #fffaed;
     height: 3000px;
+    width: auto;
     /* max-width: auto; */
 }
 
@@ -76,11 +77,11 @@ body {
     font-size: 15px;
   }
   
-  .navRight > a:visited {
+  /* .navRight > a:visited {
     color: #08605f;
     background-color: transparent;
     text-decoration: none;
-  }
+  } */
   
   .navRight > a:hover {
     color: #e94f37;
@@ -159,7 +160,7 @@ body {
     z-index: 2;
 }
 
-.aboutTab {
+#aboutTab {
     background-color: #08605f;
     z-index: 2;
 }
@@ -340,13 +341,13 @@ body {
     z-index: -5;
 }
 
-.secondRow {
+#secondRow {
     /* border: 2px solid red; */
     margin-left: 55px;
     z-index: 0;
 }
 
-.secondRow > h2 {
+#secondRow > h2 {
     font-weight: bolder;
     margin-bottom: 35px;
     font-size: 22px;
@@ -380,6 +381,7 @@ body {
 .scrollingWrapper:active,
 .scrollingWrapper:focus {
   overflow-x: scroll;
+  scrollbar-color: #08605f white;
   z-index: 0;
 }
 
@@ -455,29 +457,29 @@ body {
     z-index: 0;
 }
 
-.thirdRow {
+#thirdRow {
     margin-inline: 55px;
     margin-block: 88px;
 }
 
-.thirdHeading {
+.genHeading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
 }
 
-.thirdHeading > h2 {
+.genHeading > h2 {
     font-size: 22px;
     font-weight: bolder;
 }
 
-.thirdHeading > a {
+.genHeading > a {
     color: gray;
     text-decoration: none;
 }
 
-.thirdHeading > a:hover {
+.genHeading > a:hover {
     color: black;
     text-decoration: underline;
 }
@@ -566,4 +568,178 @@ body {
     border: 3px solid black;
     color: black;
     z-index: 0;
+}
+
+#fourthRow {
+    margin-inline: 55px;
+    z-index: -2px;
+}
+
+#fourthRow > h2 {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    z-index: -2px;
+}
+
+.latest {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width:100%;
+    z-index: -2px;
+}
+
+.latestCards {
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    z-index: -2px;
+}
+
+.fourthImages {
+    width: 100%;
+    z-index: -2px;
+}
+
+.fourthImages > img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: -2px;
+}
+
+.fourthImages > h4 {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-inline: 15px;
+    margin-top: 12px;
+    text-align: center;
+    z-index: -2px;
+}
+
+.smallText {
+    display: flex;
+    justify-content: space-between;
+    align-content: end;
+    width: 88%;
+    margin-inline: 15px;
+    margin-bottom: 20px;
+    color: gray;
+    z-index: -2px;
+}
+
+#fifthRow {
+    margin-inline: 55px;
+    margin-top: 88px;
+}
+
+.pictures {
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 55px;
+    padding-top: 55px;
+    gap: 70px;
+}
+
+.pictures > a > i {
+    font-size: 35px;
+    font-weight: lighter;
+    color: black;
+    position: relative;
+    top: -400px;
+}
+
+.pictures > a > i:hover {
+    color: #e94f37;
+}
+
+.picCard {
+    border: 2px outset whitesmoke;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 700px;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0.8rem 0.8rem 20px rgba(0, 0, 0, 0.350);
+}
+
+.picText {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.picText > p {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.picText > h3 {
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.picImg > img {
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
+    z-index: -2;
+    margin-top: -60px;
+    border-radius: 20px;
+}
+
+.picImg > a > i {
+    position: relative;
+    bottom: -150px;
+    right: -120px;
+    font-size: 22px;
+    background-color: #fcde3e;
+    color: black;
+    padding: 20px;
+    border-radius: 100%;
+}
+
+.picImg > a > i:hover {
+    background-color: #e94f37;
+    color: white;
+}
+
+.secondPic {
+    border: 2px outset whitesmoke;
+    border-radius: 12px;
+    background-color: white;
+    width: 700px;
+    box-shadow: 0.3rem 0.3rem 7px rgb(95, 94, 95);
+    height: 375px;
+    z-index: -1;
+    position: relative;
+    top: -400px;
+    left: 20px;
+    transform:rotate(2deg);
+    transform-origin: right top;
+}
+
+.lastPic {
+    border: 2px outset whitesmoke;
+    border-radius: 12px;
+    background-color: white;
+    width: 700px;
+    box-shadow: 0.3rem 0.3rem 7px rgb(95, 94, 95);
+    height: 375px;
+    z-index: -2;
+    position: relative;
+    top: -800px;
+    left: 18px;
 }
