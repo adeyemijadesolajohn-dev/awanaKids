@@ -9,7 +9,7 @@
 
 body {
     background-color: #fffaed;
-    height: 2000px;
+    height: 3000px;
     /* max-width: auto; */
 }
 
@@ -110,6 +110,7 @@ body {
     height: 500px;
     margin-top: 70px;
     /* padding-top: 55px; */
+    z-index: 2;
 }
 
 .opening {
@@ -118,6 +119,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-right: 55px;
+    z-index: 2;
 }
 
 .openType {
@@ -126,6 +128,7 @@ body {
     gap: 30px;
     width: 500px;
     margin-left: 55px;
+    z-index: 2;
 }
 
 .openType > h1 {
@@ -133,6 +136,7 @@ body {
     font-weight: bolder;
     /* width: 555px; */
     line-height: 70px;
+    z-index: 2;
 }
 
 .openType > p {
@@ -140,20 +144,24 @@ body {
     /* width: 555px; */
     line-height: 30px;
     color: gray;
+    z-index: 2;
 }
 
 .openType > .redButton {
     width: 170px;
+    z-index: 2;
 }
 
 .childrenImage > img {
     width: 800px;
     height: 500px;
     object-fit: cover;
+    z-index: 2;
 }
 
 .aboutTab {
     background-color: #08605f;
+    z-index: 2;
 }
 
 .about {
@@ -323,7 +331,7 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     position: relative;
-    top: -1000px;
+    top: -1500px;
     z-index: -5;
  }
 
@@ -335,13 +343,14 @@ body {
 .secondRow {
     /* border: 2px solid red; */
     margin-left: 55px;
-    z-index: -2;
+    z-index: 0;
 }
 
 .secondRow > h2 {
     font-weight: bolder;
     margin-bottom: 35px;
-    z-index: -2;
+    font-size: 22px;
+    z-index: 0;
 }
 
 .scrollingWrapper {
@@ -351,14 +360,27 @@ body {
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    z-index: -2;
+    z-index: 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.555) #fffaed;
+    scrollbar-gutter: stable both-edges;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
 }
 
-.scrollingWrapper::-webkit-scrollbar { 
-    display: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    z-index: -2;
+.scrollingWrapper::-webkit-scrollbar-thumb {
+    background-color: white;
+    color: white;
+    border-radius: 3px;
+    z-index: 0;
+}
+
+  
+.scrollingWrapper:hover,
+.scrollingWrapper:active,
+.scrollingWrapper:focus {
+  overflow-x: scroll;
+  z-index: 0;
 }
 
 .wrapper {
@@ -370,7 +392,7 @@ body {
     height: 100%;
     float: none;
     zoom: 1;
-    z-index: -2;
+    z-index: 0;
 }
 
 .secondRowCards {
@@ -380,7 +402,7 @@ body {
     background-color: white;
     border-radius: 8px;
     width: 600px;
-    z-index: -2;
+    z-index: 0;
 }
 
 .rightHalf > img {
@@ -389,7 +411,7 @@ body {
     object-fit: cover;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    z-index: -2;
+    z-index: 0;
 }
 
 .leftHalf {
@@ -400,21 +422,21 @@ body {
     justify-content: space-between;
     width: 200px;
     /* gap: 35px; */
-    z-index: -2;
+    z-index: 0;
 }
 
 .leftHalf > h3 {
     font-size: 20px;
     font-weight: bolder;
-    z-index: -2;
+    z-index: 0;
 }
 
 .leftHalf > p {
     font-size: 15px;
-    z-index: -2;
+    z-index: 0;
 }
 
-.secondRowButton {
+.leftHalf > Button {
     border: 3px solid #08605f;
     border-radius: 3.5px;
     background-color: white;
@@ -423,5 +445,125 @@ body {
     height: 35px;
     font-weight: bolder;
     font-size: 12px;
-    z-index: -2;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.secondRowButton:hover {
+    border: 3px solid #e94f37;
+    color: #e94f37;
+    z-index: 0;
+}
+
+.thirdRow {
+    margin-inline: 55px;
+    margin-block: 88px;
+}
+
+.thirdHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.thirdHeading > h2 {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.thirdHeading > a {
+    color: gray;
+    text-decoration: none;
+}
+
+.thirdHeading > a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.donationSelect {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 35px;
+    height: 100%;
+}
+
+.multiSelect {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: white;
+    height: auto;
+    width: 700px;
+    padding: 8px;
+}
+
+.calIcon {
+    display: flex;
+    /* gap: 20px; */
+    justify-content: start;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    /* background-color: #08605f; */
+    color: black;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.calIcon--selected {
+    background-color: #08605f;
+    color: white;
+}
+
+.calIcon > i {
+    margin: 20px;
+    font-size: 35px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.date > p {
+    font-size: 10px;
+}
+
+.date > h4 {
+    font-size: 15px;
+}
+
+.donation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.donation > h3 {
+    font-size: 20px;
+}
+
+.donation > p {
+    font-size: 15px;
+}
+.thirdRowButton {
+    border: 3px solid gray;
+    border-radius: 3.5px;
+    background: transparent;
+    color: gray;
+    width: 88px;
+    height: 35px;
+    font-weight: bolder;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.thirdRowButton:hover {
+    border: 3px solid black;
+    color: black;
+    z-index: 0;
 }
